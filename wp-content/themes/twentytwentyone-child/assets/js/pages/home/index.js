@@ -40,7 +40,7 @@ function handleToggleMenuOnMobile() {
 
   $(document).on("click", function (e) {
     if (
-      $(e.target)?.closest(".btn-toggle-menu-mobile").length > 0 ||
+      $(e.target)?.closest("#btn-toggle-menu-mobile").length > 0 ||
       $(e.target)?.attr("id")?.includes("btn-toggle-menu-mobile")
     ) {
       return;

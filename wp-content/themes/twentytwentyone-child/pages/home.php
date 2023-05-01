@@ -89,13 +89,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="contact-us">
-        <h3 class="contact-us__title fw-700">YMBARNWELL</h3>
-        <p class="contact-us__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mattis nunc. Nullam ullamcorper dui arcu, quis fringilla lacus varius non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mattis nunc. Nullam ullamcorper dui arcu, quis fringilla lacus varius non.</p>
-        <p class="contact-us__us fw-700">Contact us: admin@gmail.com</p>
-    </div>
 </div>
-
 
 <?php
 get_footer();

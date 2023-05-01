@@ -27,6 +27,9 @@ body #content {
 .fs-22 {
   font-size: 2.2rem;
 }
+.fs-18 {
+  font-size: 1.8rem;
+}
 .fs-16 {
   font-size: 1.6rem;
 }
@@ -40,6 +43,9 @@ body #content {
 .lh-28 {
   line-height: 2.8rem;
 }
+.lh-24 {
+  line-height: 2.4rem;
+}
 .lh-22 {
   line-height: 2.2rem;
 }
@@ -51,7 +57,6 @@ body #content {
 }
 
 .hide {
-  /* visibility: hidden; */
   left: -100%;
   transition: left 0.5s !important;
 }
@@ -61,10 +66,35 @@ body #content {
   transition: left 0.5s;
 }
 
+.paginate {
+  display: flex;
+  padding-top: 4.3rem;
+  padding-bottom: 2.5rem;
+  justify-content: center;
+}
+.paginate__btn {
+  font-size: 2.5rem;
+  padding: 0 1.9rem;
+  border-radius: 0.4rem;
+  color: var(--white-color) !important;
+  background-color: var(--bg-title) !important;
+}
+.paginate__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.1rem solid var(--border-color); */
+  padding: 0.9rem 1.2rem;
+  margin: 0 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 0px 2.63904px rgb(0 0 0 / 25%);
+}
+
 /* =========   Header   ========== */
 header.header-page {
   background-color: #fff;
   position: relative;
+  box-shadow: 0px 1.31952px 19.7928px 2.63904px rgb(61 61 61 / 22%);
 }
 
 .header-page__bar {
@@ -191,6 +221,25 @@ header.header-page {
 }
 
 /* =========   Footer   ========== */
+.contact-us {
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--bg-color-1);
+  padding: 2.5rem 0 4.5rem 0;
+}
+.contact-us__title {
+  font-size: 2.2rem;
+}
+.contact-us__content {
+  max-width: 61rem;
+  margin: auto;
+  padding: 2rem 0 3.5rem 0;
+}
+.contact-us__us {
+  font-size: 1.8rem;
+}
+
 footer.footer-page {
   background-color: rgba(231, 231, 231, 0.97);
 }
@@ -212,6 +261,18 @@ footer.footer-page {
   margin: 0;
 }
 
+@media only screen and (max-width: 1399px) {
+  .contact-us {
+    margin-top: 3rem;
+    padding: 2.5rem 0 3rem 0;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .paginate {
+    padding-top: 2.3rem;
+    padding-bottom: 0.5rem;
+  }
+}
 @media only screen and (min-width: 993px) {
   .is-mobile {
     display: none !important;
@@ -234,10 +295,19 @@ footer.footer-page {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .paginate {
+    padding-top: 2.3rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .title {
     border-radius: 4px;
+  }
+  .contact-us__content {
+    max-width: 61rem;
+    margin: auto;
+    padding: 2rem 1.8rem 3.5rem 1.8rem;
   }
 }
