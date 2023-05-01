@@ -1,0 +1,243 @@
+/*
+Theme Name:   Twenty Twenty-One Child
+Theme URI:    http://example.com/twenty-fifteen-child/
+Description:  Twenty Twenty-One Child Theme
+Author:       Admin
+Template:     twentytwentyone
+Version:      1.0.0
+Text Domain:  twentytwentyonechild
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem !important;
+  /* background-color: unset !important; */
+}
+body #content {
+  min-height: 800px;
+  /* height: calc(100vh - 124px); */
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.fs-22 {
+  font-size: 2.2rem;
+}
+.fs-16 {
+  font-size: 1.6rem;
+}
+.fs-13 {
+  font-size: 1.3rem;
+}
+.fs-11 {
+  font-size: 1.1rem;
+}
+
+.lh-28 {
+  line-height: 2.8rem;
+}
+.lh-22 {
+  line-height: 2.2rem;
+}
+.lh-18 {
+  line-height: 1.8rem;
+}
+.lh-15 {
+  line-height: 1.5rem;
+}
+
+.hide {
+  /* visibility: hidden; */
+  left: -100%;
+  transition: left 0.5s !important;
+}
+.show {
+  visibility: visible;
+  left: 0%;
+  transition: left 0.5s;
+}
+
+/* =========   Header   ========== */
+header.header-page {
+  background-color: #fff;
+  position: relative;
+}
+
+.header-page__bar {
+  position: relative;
+}
+.hp-nav-bar {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.hp-nav-bar__item {
+  padding: 2.5rem 1.5rem;
+}
+
+.hp-nav-bar__item a {
+  text-decoration: none;
+}
+
+.header-page__menu {
+  position: fixed;
+  background: white;
+  z-index: 999;
+  top: 0;
+  height: 100vh;
+  width: 24rem;
+  transition: left 0.5s;
+}
+
+.hp-nav-bar-mobile {
+  height: 7rem;
+  background-color: var(--bg-title);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.5rem;
+  padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+}
+.header-page__menu .social {
+  padding-top: 8rem;
+  padding-bottom: 2.3rem;
+}
+.header-page__menu .social__content {
+  list-style: none;
+  display: flex;
+}
+
+.header-page__menu .social__item {
+  border: solid 0.1rem var(--text-color);
+  padding: 0.3rem 0.7rem;
+  border-radius: 4.3rem;
+  width: 3.3rem;
+  text-align: center;
+  margin-right: 1.8rem;
+}
+.header-page__menu .social__item:last-child {
+  margin-right: 0;
+}
+.header-page__menu .menu__content {
+  list-style: none;
+  padding-left: 1.8rem;
+}
+.header-page__menu .menu__item {
+  padding: 1.3rem 0;
+  border-bottom: solid 0.1rem var(--border-color);
+}
+.header-page__menu .menu__item.active {
+  color: var(--bg-title);
+  text-decoration: underline;
+}
+
+.header-page__box-search {
+  height: 7rem;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 998;
+  background: white;
+  padding: 1rem 1.4rem;
+  border-radius: 0.8rem;
+  right: 1rem;
+  top: 6.5rem;
+}
+.header-page__box-search .input-search {
+  height: 5rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--border-color);
+  margin: 0;
+}
+.header-page__box-search .input-search:focus {
+  outline: unset;
+}
+.header-page__box-search .box-search {
+  display: flex;
+}
+.header-page__box-search .box-search:before {
+  width: 0;
+  content: "";
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent var(--white-color) transparent;
+  top: -1rem;
+  right: 1rem;
+}
+
+.header-page .blur {
+  content: "";
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.72);
+  position: fixed;
+  width: 100%;
+  z-index: 990;
+  top: 0;
+}
+
+.site-content {
+  padding-top: 3.5rem;
+}
+
+/* =========   Footer   ========== */
+footer.footer-page {
+  background-color: rgba(231, 231, 231, 0.97);
+}
+
+.fp-nav-bar {
+  /* list-style: none; */
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.fp-nav-bar__item {
+  padding: 1.3rem 0.5rem;
+  line-height: 2.2rem;
+}
+
+.fp-nav-bar__item::marker {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 993px) {
+  .is-mobile {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .is-mobile {
+    display: block;
+  }
+  .header-page__bar.container-lg {
+    padding: 0;
+  }
+  .site-content {
+    padding-top: 4.2rem;
+  }
+  .fp-nav-bar {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    border-radius: 4px;
+  }
+}
