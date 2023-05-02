@@ -30,4 +30,5 @@ function add_pages_style()
     wp_enqueue_style('entertainment-page', get_template_child_directory() . '/assets/css/pages/entertainment/index.css');
     wp_enqueue_style('animal-page', get_template_child_directory() . '/assets/css/pages/animal/index.css');
     wp_enqueue_style('funny-page', get_template_child_directory() . '/assets/css/pages/funny/index.css');
+    wp_enqueue_style('detail-page', get_template_child_directory() . '/assets/css/pages/detail/index.css');
 }

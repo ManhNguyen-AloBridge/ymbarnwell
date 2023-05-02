@@ -90,6 +90,14 @@ body #content {
   box-shadow: 0px 0px 2.63904px rgb(0 0 0 / 25%);
 }
 
+.box-shadow-bold {
+  box-shadow: 0px 0px 5.27809px rgba(0, 0, 0, 0.25) !important;
+}
+
+.box-shadow-nor {
+  box-shadow: 0px 0px 2.63904px rgba(0, 0, 0, 0.25);
+}
+
 /* =========   Header   ========== */
 header.header-page {
   background-color: #fff;
@@ -309,5 +317,11 @@ footer.footer-page {
     max-width: 61rem;
     margin: auto;
     padding: 2rem 1.8rem 3.5rem 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-us {
+    margin-top: 2rem;
   }
 }
