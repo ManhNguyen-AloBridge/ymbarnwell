@@ -17,7 +17,7 @@ body {
   /* background-color: unset !important; */
 }
 body #content {
-  min-height: 800px;
+  min-height: 50rem;
   /* height: calc(100vh - 124px); */
 }
 

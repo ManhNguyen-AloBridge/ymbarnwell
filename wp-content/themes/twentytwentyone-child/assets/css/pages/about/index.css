@@ -1,0 +1,25 @@
+.about-us-page .about-us__main {
+}
+.about-us-page .about-us__title {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+@media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (max-width: 991px) {
+  .about-us-page .about-us__title {
+    padding-top: 2.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-us-page .about-us__title {
+    padding-top: 0.8rem;
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 480px) {
+}
