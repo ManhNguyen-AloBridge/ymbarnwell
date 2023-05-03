@@ -20,14 +20,14 @@ $wrapper_classes .= has_nav_menu('primary') ? ' has-menu' : '';
 	<div class="header-page__bar container-lg">
 		<ul class="hp-nav-bar d-none d-lg-flex">
 			<!-- <li class="nav-bar__item"><a href="<?= get_site_url() ?>/?page_id=244">Activity</a></li> -->
-			<li class="hp-nav-bar__item"><a href="#">HOME</a></li>
-			<li class="hp-nav-bar__item"><a href="#">ENTERTAINMENT</a></li>
-			<li class="hp-nav-bar__item"><a href="#">ANIMALS</a></li>
-			<li class="hp-nav-bar__item"><a href="#">FUNNY</a></li>
-			<li class="hp-nav-bar__item"><a href="#">ABOUT US</a></li>
-			<li class="hp-nav-bar__item"><i class="fa-brands fa-twitter"></i></li>
-			<li class="hp-nav-bar__item"><i class="fa-brands fa-facebook-f"></i></li>
-			<li class="hp-nav-bar__item"><i class="fa-brands fa-youtube"></i></li>
+			<li class="hp-nav-bar__item"><a href="<?= get_site_url() ?>">HOME</a></li>
+			<li class="hp-nav-bar__item"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ENTERTAINMENT_PAGE_ID'] ?>">ENTERTAINMENT</a></li>
+			<li class="hp-nav-bar__item"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ANIMAL_PAGE_ID'] ?>">ANIMALS</a></li>
+			<li class="hp-nav-bar__item"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['FUNNY_PAGE_ID'] ?>">FUNNY</a></li>
+			<li class="hp-nav-bar__item"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ABOUT_US_PAGE_ID'] ?>">ABOUT US</a></li>
+			<li class="hp-nav-bar__item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+			<li class="hp-nav-bar__item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+			<li class="hp-nav-bar__item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
 			<li class="hp-nav-bar__item btn-search"><i class="fa-solid fa-magnifying-glass"></i></li>
 			<div class="header-page__box-search d-none">
 				<div class="box-search">
