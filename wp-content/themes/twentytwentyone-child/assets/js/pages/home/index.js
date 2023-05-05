@@ -5,7 +5,42 @@ $(document).ready(function () {
   handleToggleMenuOnMobile();
 
   handleToggleSearchForm();
+
+  handlePaginate();
 });
+
+function handlePaginate() {
+  console.log($("#paginate-prev").length);
+  console.log($("#paginate-next").length);
+
+  if ($("#paginate-prev").length == 0) {
+    $("button.prev").attr("disabled", true);
+  }
+
+  if ($("#paginate-next").length == 0) {
+    $("button.next").attr("disabled", true);
+  }
+  handleClickPrevPaginate();
+  handleClickNextPaginate();
+}
+
+function handleClickPrevPaginate() {
+  $(document).on("click", "button.prev", function () {
+    if ($("a.prev").length > 0) {
+      const prevUrl = $("a.prev").attr("href");
+      window.location.href = prevUrl;
+    }
+  });
+}
+function handleClickNextPaginate() {
+  $(document).on("click", "button.next", function () {
+    if ($("a.next").length > 0) {
+      const nextUrl = $("a.next").attr("href");
+      console.log(nextUrl);
+      window.location.href = nextUrl;
+    }
+  });
+}
 
 function handleToggleSearchForm() {
   const boxSearchElement = $(".header-page__box-search");
