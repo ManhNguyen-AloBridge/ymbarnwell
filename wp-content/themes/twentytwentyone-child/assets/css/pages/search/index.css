@@ -1,0 +1,174 @@
+.search-page .search__head {
+  text-align: center;
+  padding-bottom: 4.2rem;
+  width: 59%;
+  margin: auto;
+}
+.search-page .search__main {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 65% auto;
+}
+.search-page .search-content-item {
+  gap: 1.5rem;
+  display: grid;
+  height: 20rem;
+  margin-bottom: 1rem;
+  grid-template-columns: 30% auto;
+}
+.search-page .search-content-item:last-child {
+  margin-bottom: 0;
+}
+.search-page .search-content-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search-page .search-content-item__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-height: 1.8rem; /* fallback */
+  max-height: 1.8rem * 3; /* fallback */
+}
+.search-page .search__content {
+  padding: 0 1rem 1rem 1rem;
+}
+.search-page .search__content .search-result-count {
+  padding: 1rem 0;
+}
+.search-page .search__content .page-title {
+  font-size: 5rem;
+}
+.search-page .search__content .search-form {
+  flex-flow: row;
+  gap: 1rem;
+  align-content: center;
+}
+.search-page .search__content .search-form > label {
+  display: flex;
+}
+.search-page .search__content .search-field {
+  width: 100%;
+  font-size: 1.8rem;
+  border: solid 0.2rem var(--border-color);
+  border-radius: 0.4rem;
+  margin: 0;
+}
+.search-page .search__content .search-field:focus {
+  outline: unset !important;
+}
+.search-page .search__content .search-submit {
+  background: var(--bg-title) !important;
+  color: var(--white-color) !important;
+  border-radius: 0.4rem;
+  margin: 0;
+}
+.search-page .search__content .page-header {
+  padding-bottom: 2rem;
+  border-bottom: solid 0.3rem var(--border-color);
+}
+.search-page .search__recent {
+  height: fit-content;
+  padding: 0 1.3rem 1.5rem 1.3rem;
+  box-shadow: 0px 0px 2.63904px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 1199px) {
+  .search-page .search-content-item {
+    height: 16rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .search__title {
+    padding-top: 1.8rem;
+  }
+  .search-page .search__head {
+    width: 84%;
+  }
+  .search-page .search__main {
+    gap: 1rem;
+  }
+  .search-page .search-content-item {
+    height: 15rem;
+    overflow: hidden;
+    grid-template-columns: 40% auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .search-page .search__head {
+    width: 100%;
+    padding-bottom: 1.5rem;
+  }
+  .search-page .search__description {
+    display: none;
+  }
+  .search-page .search__title {
+    background-color: var(--bg-title);
+    color: var(--white-color);
+    padding: 1.2rem;
+  }
+  .search-page .search__main {
+    grid-template-columns: 1fr;
+  }
+  .search-page .search__content .page-header {
+    max-width: 100%;
+  }
+  .search-no-results .page-content {
+    margin-bottom: 6rem;
+    margin-top: 7rem !important;
+  }
+  .search-page .search-content-item {
+    height: 41rem;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% auto;
+  }
+  .search-page .search-content-item__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.8rem; /* fallback */
+    max-height: 1.8rem * 2; /* fallback */
+  }
+
+  .search-page .search__content {
+    order: 0;
+  }
+  .search-page .side-bar {
+    order: 2;
+    margin-bottom: 0.8rem;
+  }
+  .search-page .paginate {
+    order: 1;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 480px) {
+  .search-page .search-content-item {
+    height: 32rem;
+    grid-template-rows: 70% auto;
+  }
+  .search-page .search__content .search-form {
+    flex-flow: column;
+    align-items: center;
+  }
+  .search-page .search__content .search-submit {
+    width: 11rem;
+  }
+  .search-no-results .page-content {
+    margin-bottom: 6rem;
+  }
+  .search-no-results .page-content {
+    margin-bottom: 5rem;
+    margin-top: 5rem !important;
+  }
+}

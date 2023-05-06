@@ -31,8 +31,12 @@ $wrapper_classes .= has_nav_menu('primary') ? ' has-menu' : '';
 			<li class="hp-nav-bar__item btn-search"><i class="fa-solid fa-magnifying-glass"></i></li>
 			<div class="header-page__box-search d-none">
 				<div class="box-search">
-					<i class="fa-sharp fa-solid fa-triangle"></i>
-					<input class="input-search" type="text" placeholder="Search ...">
+					<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+						<label>
+							<span class="screen-reader-text"><?php echo _x('Search for:', 'label', 'textdomain'); ?></span>
+							<input type="search" class="input-search" placeholder="<?php echo esc_attr_x('Search …', 'placeholder', 'textdomain'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+						</label>
+					</form>
 				</div>
 			</div>
 		</ul>
@@ -61,11 +65,11 @@ $wrapper_classes .= has_nav_menu('primary') ? ' has-menu' : '';
 		</div>
 		<div class="menu">
 			<ul class="menu__content">
-				<li class="menu__item active fs-16 fw-700 lh-22">HOME</li>
-				<li class="menu__item fs-16 fw-700 lh-22">ENTERTAINMENT</li>
-				<li class="menu__item fs-16 fw-700 lh-22">ANIMALS</li>
-				<li class="menu__item fs-16 fw-700 lh-22">FUNNY</li>
-				<li class="menu__item fs-16 fw-700 lh-22">ABOUT US</li>
+				<li class="menu__item fs-16 fw-700 lh-22"><a href="<?= get_site_url() ?>">HOME</a></li>
+				<li class="menu__item fs-16 fw-700 lh-22"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ENTERTAINMENT_PAGE_ID'] ?>">ENTERTAINMENT</a></li>
+				<li class="menu__item fs-16 fw-700 lh-22"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ANIMAL_PAGE_ID'] ?>">ANIMALS</a></li>
+				<li class="menu__item fs-16 fw-700 lh-22"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['FUNNY_PAGE_ID'] ?>">FUNNY</a></li>
+				<li class="menu__item fs-16 fw-700 lh-22"><a href="<?= get_site_url() ?>/?page_id=<?= get_option('data_config')['ABOUT_US_PAGE_ID'] ?>">ABOUT US</a></li>
 			</ul>
 		</div>
 	</div>

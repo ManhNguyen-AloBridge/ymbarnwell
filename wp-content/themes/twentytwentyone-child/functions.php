@@ -1,13 +1,5 @@
 <?php
-
-// function twentytwentone_styles() {
-//     wp_enqueue_style( 'child-style', get_stylesheet_uri(),
-//     array( 'twenty-twenty-one-style' ), wp_get_theme()->get('Version') );
-// }
-// add_action( 'wp_enqueue_scripts', 'twentytwentyone_styles');
-
 require_once get_stylesheet_directory() . '/const/config.php';
-
 
 add_action('wp_enqueue_scripts', 'add_layout_style');
 function add_layout_style()
@@ -46,4 +38,5 @@ function add_pages_style()
     wp_enqueue_style('funny-page', get_template_child_directory() . '/assets/css/pages/funny/index.css');
     wp_enqueue_style('single-page', get_template_child_directory() . '/assets/css/pages/single/index.css');
     wp_enqueue_style('about-page', get_template_child_directory() . '/assets/css/pages/about/index.css');
+    wp_enqueue_style('search-page', get_template_child_directory() . '/assets/css/pages/search/index.css');
 }

@@ -14,7 +14,7 @@ html {
 
 body {
   font-size: 1.6rem !important;
-  /* background-color: unset !important; */
+  background-color: unset !important;
 }
 body #content {
   min-height: 50rem;
@@ -64,6 +64,11 @@ body #content {
   visibility: visible;
   left: 0%;
   transition: left 0.5s;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--bg-title) !important;
 }
 
 .link-to-detail,
@@ -188,6 +193,11 @@ header.header-page {
 .hp-nav-bar__item {
   padding: 2.5rem 1.5rem;
   font-weight: 700;
+  cursor: pointer;
+}
+.hp-nav-bar__item.active a {
+  color: var(--bg-title);
+  text-decoration: underline;
 }
 
 .hp-nav-bar__item a {
@@ -196,6 +206,10 @@ header.header-page {
 .hp-nav-bar__item a:focus {
   text-decoration: unset !important;
   background: unset !important;
+}
+.hp-nav-bar__item.btn-search:hover i {
+  cursor: pointer;
+  color: var(--bg-title);
 }
 
 .header-page__menu {
@@ -238,6 +252,11 @@ header.header-page {
   text-align: center;
   margin-right: 1.8rem;
 }
+.header-page__menu .social__item:hover {
+  cursor: pointer;
+  color: var(--bg-title);
+  border: solid 0.1rem var(--bg-title);
+}
 .header-page__menu .social__item:last-child {
   margin-right: 0;
 }
@@ -249,7 +268,7 @@ header.header-page {
   padding: 1.3rem 0;
   border-bottom: solid 0.1rem var(--border-color);
 }
-.header-page__menu .menu__item.active {
+.header-page__menu .menu__item.active a {
   color: var(--bg-title);
   text-decoration: underline;
 }
@@ -264,12 +283,19 @@ header.header-page {
   border-radius: 0.8rem;
   right: 1rem;
   top: 6.5rem;
+  width: 50rem;
+}
+.header-page__box-search .search-form,
+.header-page__box-search .search-form > label {
+  width: 100%;
 }
 .header-page__box-search .input-search {
   height: 5rem;
   border-radius: 0.4rem;
   border: 1px solid var(--border-color);
   margin: 0;
+  width: 100%;
+  font-size: 1.6rem;
 }
 .header-page__box-search .input-search:focus {
   outline: unset;
@@ -406,6 +432,9 @@ footer.footer-page {
     margin: auto;
     padding: 2rem 1.8rem 3.5rem 1.8rem;
   }
+  .header-page__box-search {
+    width: 40rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -414,5 +443,8 @@ footer.footer-page {
   }
   .side-bar {
     gap: 1.6rem;
+  }
+  .header-page__box-search {
+    width: 30rem;
   }
 }

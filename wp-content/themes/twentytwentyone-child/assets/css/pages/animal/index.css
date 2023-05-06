@@ -25,17 +25,6 @@
   height: 100%;
   object-fit: cover;
 }
-.animal-page .animal__recent {
-  height: fit-content;
-  padding: 0 1.3rem 1.5rem 1.3rem;
-  box-shadow: 0px 0px 2.63904px rgba(0, 0, 0, 0.25);
-}
-.animal-page .animal__recent-title {
-  color: var(--bg-title);
-  padding-top: 1.2rem;
-  padding-bottom: 1rem;
-  text-align: center;
-}
 .animal-page .animal-content-item__description {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -44,27 +33,6 @@
   -webkit-line-clamp: 3; /* number of lines to show */
   line-height: 1.8rem; /* fallback */
   max-height: 1.8rem * 3; /* fallback */
-}
-.animal-page .animal-recent-item {
-  border-bottom: 0.1rem solid var(--border-color);
-  padding: 1.5rem 0;
-}
-.animal-page .animal-recent-item:first-child {
-  padding-top: 0;
-}
-.animal-page .animal-recent-item:last-child {
-  border-bottom: unset;
-  padding-bottom: 0;
-}
-.animal-page .animal-recent-item__content {
-  display: grid;
-  grid-template-columns: 30% auto;
-  gap: 1rem;
-}
-.animal-page .animal-recent-item__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -86,18 +54,6 @@
   .animal-page .animal-content-item {
     height: 15rem;
     overflow: hidden;
-    grid-template-columns: 40% auto;
-  }
-  .animal-page .animal__recent {
-    padding: 0 1.2rem 1rem 1.2rem;
-  }
-  .animal-page .animal__recent-title {
-    padding-bottom: 1.2rem;
-  }
-  .animal-page .animal-recent-item {
-    padding: 1rem 0;
-  }
-  .animal-page .animal-recent-item__content {
     grid-template-columns: 40% auto;
   }
 }
@@ -132,12 +88,10 @@
     line-height: 1.8rem; /* fallback */
     max-height: 1.8rem * 2; /* fallback */
   }
-}
-@media only screen and (max-width: 576px) {
   .animal-page .animal__content {
     order: 0;
   }
-  .animal-page .animal__recent {
+  .animal-page .side-bar {
     order: 2;
     margin-bottom: 0.8rem;
   }
@@ -146,6 +100,8 @@
     padding-top: 2rem;
     padding-bottom: 3rem;
   }
+}
+@media only screen and (max-width: 576px) {
 }
 @media only screen and (max-width: 480px) {
   .animal-page .animal-content-item {
