@@ -2,10 +2,6 @@
 
 <?php
 get_header();
-
-
-$argsRecent = array('category' => get_option('data_config')['ANIMAL_CATEGORY_ID'], 'post_type' =>  'post', 'numberposts' => get_option('data_config')['RECENT_POST_NUMBER']);
-$recentPosts = get_posts($argsRecent);
 $pageData = get_page(get_option('data_config')['ANIMAL_PAGE_ID']);
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Lấy số trang hiện tại
@@ -40,30 +36,25 @@ $big = 999999999; // need an unlikely integer
                 if ($query->have_posts()) {
                     while ($query->have_posts()) : $query->the_post();
                 ?>
-
                         <div class="animal-content-item">
-                            <img class="animal-content-item__image" src="<?= get_image_thumbnail_post($post) ?>" alt="">
+                            <a class="link-image-to-detail" href="<?= get_the_permalink($post->id) ?>">
+                                <img class="animal-content-item__image" src="<?= get_image_thumbnail_post($post) ?>" alt="">
+                            </a>
                             <div class="animal-content-item__info">
-                                <h3 class="animal-content-item__title fs-16 fw-700 lh-22"><?= $post->post_title ?></h3>
+                                <a class="link-to-detail" href="<?= get_the_permalink($post->id) ?>">
+                                    <h3 class="animal-content-item__title fs-16 fw-700 lh-22"><?= $post->post_title ?></h3>
+                                </a>
                                 <p class="animal-content-item__description fs-13 lh-18">
                                     <?= $post->post_excerpt ?>
                                 </p>
                             </div>
                         </div>
-                <?php endwhile;
+                <?php
+                    endwhile;
                 } ?>
             </div>
-            <div class="animal__recent">
-                <h3 class="animal__recent-title fs-16 fw-700 lh-22">RECENT POST</h3>
-                <?php foreach ($recentPosts as $item) { ?>
-
-                    <div class="animal-recent-item">
-                        <div class="animal-recent-item__content">
-                            <img class="animal-recent-item__image" src="<?= get_image_thumbnail_post($item) ?>" alt="">
-                            <h4 class="animal-recent-item__title fs-12 fw-700 lh-18"><?= $item->post_title ?></h4>
-                        </div>
-                    </div>
-                <?php } ?>
+            <div class="side-bar">
+                <?= get_template_part('components/sidebar') ?>
             </div>
 
             <div class="paginate d-flex d-md-none">
@@ -95,7 +86,6 @@ $big = 999999999; // need an unlikely integer
             echo '</div>';
         }
         ?>
-
 
     </div>
 </div>

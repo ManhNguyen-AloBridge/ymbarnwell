@@ -133,12 +133,33 @@
   color: var(--white-color);
   background-color: var(--bg-title);
 }
+.home-page .entertainment__item .description,
+.home-page .funny__item .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  line-height: 1.8rem; /* fallback */
+  max-height: 1.8rem * 5; /* fallback */
+}
+.home-page .entertainment__item .tag,
+.home-page .funny__item .tag {
+  margin-bottom: 0.5rem;
+}
 .home-page .entertainment__item,
 .home-page .funny__item {
   display: grid;
   margin-bottom: 0.7rem;
   grid-template-columns: 40% 1fr;
   gap: 1rem;
+  height: 180px;
+}
+.home-page .entertainment__item .link-image-to-detail,
+.home-page .funny__item .link-image-to-detail,
+.home-page .link-image-to-detail img,
+.home-page .link-image-to-detail img {
+  height: inherit;
 }
 .home-page .entertainment__item:last-child,
 .home-page .funny__item:last-child {
@@ -147,6 +168,7 @@
 .home-page .entertainment__img,
 .home-page .funny__img {
   width: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -170,14 +192,42 @@
   .home-page .animal .right-content__img {
     height: calc((40rem - 0.6rem) / 2);
   }
-
+  .home-page .entertainment__img,
+  .home-page .funny__img {
+    height: 155px;
+  }
   .home-page .entertainment__title,
   .home-page .funny__title {
     margin-bottom: 1rem;
   }
-
+  .home-page .entertainment__item .description,
+  .home-page .funny__item .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-height: 1.8rem; /* fallback */
+    max-height: 1.8rem * 4; /* fallback */
+  }
   .home-page .entertainment-funny {
     margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .home-page .entertainment__item,
+  .home-page .funny__item {
+    height: 130px;
+  }
+  .home-page .entertainment__item .description,
+  .home-page .funny__item .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-height: 1.8rem; /* fallback */
+    max-height: 1.8rem * 3; /* fallback */
   }
 }
 
@@ -199,6 +249,10 @@
   }
   .home-page .animal .right-content__img {
     height: calc((35rem - 0.6rem) / 2);
+  }
+  .home-page .entertainment__item,
+  .home-page .funny__item {
+    height: 125px;
   }
 }
 
@@ -242,6 +296,20 @@
   .home-page .funny {
     margin-top: 1rem;
   }
+  .home-page .entertainment__item .description,
+  .home-page .funny__item .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-height: 1.8rem; /* fallback */
+    max-height: 1.8rem * 5; /* fallback */
+  }
+  .home-page .entertainment__item,
+  .home-page .funny__item {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -261,18 +329,28 @@
   .home-page .entertainment__item .tag,
   .home-page .funny__item .tag {
     display: none;
+    margin-bottom: 0.5rem;
   }
   .home-page .entertainment__item .title,
   .home-page .funny__item .title {
     font-size: 1.6rem;
     line-height: 2.2rem;
   }
-  .entertainment__item .description,
+  .home-page .entertainment__item .description,
   .home-page .funny__item .description {
     font-size: 1.3rem;
     line-height: 1.8rem;
   }
-
+  .home-page .entertainment__item .description,
+  .home-page .funny__item .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.8rem; /* fallback */
+    max-height: 1.8rem * 2; /* fallback */
+  }
   .home-page .funny__scroll {
     overflow: scroll;
     display: -webkit-box;
