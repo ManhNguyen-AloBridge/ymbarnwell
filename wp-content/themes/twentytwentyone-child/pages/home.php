@@ -148,7 +148,7 @@ $funnyPosts = get_posts($argsFunny);
                     ?>
                             <div class="funny__item">
                                 <a class="link-image-to-detail" href="<?= get_the_permalink($item) ?>">
-                                    <img class="funny__img" src="<?= get_template_child_directory() . '/assets/images/image-recent-1.png' ?>" alt="" srcset="">
+                                    <img class="funny__img" src="<?= get_image_thumbnail_post($item) ?>" alt="" srcset="">
                                 </a>
                                 <div class="funny__content">
                                     <?php if (wp_get_post_tags($item->ID)[0]->name) { ?>

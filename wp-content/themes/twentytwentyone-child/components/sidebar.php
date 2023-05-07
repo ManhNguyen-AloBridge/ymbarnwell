@@ -19,7 +19,7 @@ $social = get_query_var('social');
         <div class="recent-item">
             <div class="recent-item__content">
                 <a class="link-image-to-detail" href="<?= get_the_permalink($item) ?>">
-                    <img class="recent-item__image" src="<?= get_template_child_directory() . '/assets/images/image-recent-2.png' ?>" alt="">
+                    <img class="recent-item__image" src="<?= get_image_thumbnail_post($item) ?>" alt="">
                 </a>
                 <a class="link-to-detail" href="<?= get_the_permalink($item) ?>">
                     <h4 class="recent-item__title fs-12 fw-700 lh-18"><?= $item->post_title ?></h4>

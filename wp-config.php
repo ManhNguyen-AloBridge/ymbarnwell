@@ -27,10 +27,12 @@ define('DB_NAME', 'db_ymbarnwell');
 define('DB_USER', 'root');
 
 /** Database password */
-define('DB_PASSWORD', 'root');
+// define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 
 /** Database hostname */
-define('DB_HOST', 'mysql');
+// define('DB_HOST', 'mysql');
+define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -57,6 +59,8 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/ymbarnwell');
+
 
 /**#@-*/
 

@@ -66,6 +66,10 @@ body #content {
   transition: left 0.5s;
 }
 
+a {
+  color: var(--text-color);
+}
+
 a:hover {
   cursor: pointer;
   color: var(--bg-title) !important;
@@ -368,6 +372,9 @@ footer.footer-page {
   line-height: 2.2rem;
   font-weight: 700;
 }
+.fp-nav-bar__item a {
+  color: var(--text-color);
+}
 
 .fp-nav-bar__item::marker {
   font-size: 0.75rem;
@@ -392,6 +399,9 @@ footer.footer-page {
   }
 }
 @media only screen and (max-width: 992px) {
+  main .container-lg {
+    padding-top: 4rem;
+  }
   .is-mobile {
     display: block;
   }
