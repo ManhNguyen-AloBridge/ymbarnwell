@@ -268,6 +268,9 @@ header.header-page {
   padding: 1.3rem 0;
   border-bottom: solid 0.1rem var(--border-color);
 }
+.header-page__menu .menu__item a {
+  text-decoration: unset;
+}
 .header-page__menu .menu__item.active a {
   color: var(--bg-title);
   text-decoration: underline;

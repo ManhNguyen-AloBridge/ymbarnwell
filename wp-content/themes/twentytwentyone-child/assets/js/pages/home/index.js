@@ -12,7 +12,10 @@ $(document).ready(function () {
 });
 
 function checkActiveMenu() {
-  const currentUrl = window.location.href;
+  let currentUrl = window.location.href;
+  if (window.location.search == "") {
+    currentUrl = currentUrl.slice(0, -1);
+  }
   $(".menu__content .menu__item a").each((index, item) => {
     if ($(item).attr("href") == currentUrl) {
       $(item).closest(".menu__item").addClass("active");
