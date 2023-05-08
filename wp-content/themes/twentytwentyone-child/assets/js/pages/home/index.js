@@ -9,6 +9,16 @@ $(document).ready(function () {
   handlePaginate();
 
   checkActiveMenu();
+
+  $(document).ready(function () {
+    $(".slideshow").slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      infinity: true,
+      dots: false,
+      arrows: false,
+    });
+  });
 });
 
 function checkActiveMenu() {
@@ -20,6 +30,15 @@ function checkActiveMenu() {
     if ($(item).attr("href") == currentUrl) {
       $(item).closest(".menu__item").addClass("active");
     }
+
+    if(window.location.search.includes('page_id')
+    && $(item).attr("href").includes('page_id')
+    && window.location.href.includes($(item).attr("href"))
+    ){
+      $(item).closest(".menu__item").addClass("active");
+    }
+
+
   });
   $(".hp-nav-bar .hp-nav-bar__item a").each((index, item) => {
     if ($(item).attr("href") == currentUrl) {
@@ -77,7 +96,7 @@ function handleToggleSearchForm() {
 
     if (
       $(e.target).closest(".header-page__box-search").length == 0 &&
-      !$(e.target).attr("class").includes("btn-search") &&
+      !$(e.target).attr("class")?.includes("btn-search") &&
       $(e.target).closest(".btn-search").length == 0
     ) {
       boxSearchElement.addClass("d-none");
@@ -101,7 +120,9 @@ function handleToggleMenuOnMobile() {
       return;
     }
     const classCurrentElement =
-      "." + $(e.target).attr("class").replaceAll(" ", ".");
+    "." + $(e.target).attr("class")?.replaceAll(" ", ".");
+    
+    if(classCurrentElement === undefined) return;
 
     if (
       $(".header-page__menu").find(`${classCurrentElement}`).length == 0 &&

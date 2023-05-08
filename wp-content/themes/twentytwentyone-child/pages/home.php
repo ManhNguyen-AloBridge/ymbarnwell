@@ -142,7 +142,7 @@ $funnyPosts = get_posts($argsFunny);
             </div>
             <div class="funny">
                 <h3 class="funny__title fw-700 fs-16 lh-22 title">FUNNY</h3>
-                <div class="funny__scroll">
+                <div class="funny__scroll d-none d-sm-block">
                     <?php foreach ($funnyPosts as $index => $item) {
                         if ($index < 4) {
                     ?>
@@ -166,6 +166,35 @@ $funnyPosts = get_posts($argsFunny);
                         }
                     } ?>
                 </div>
+                <div class="slider d-block d-sm-none">
+                    <div class="slideshow">
+                        <div class="slideshow">
+                            <?php foreach ($funnyPosts as $index => $item) {
+                                if ($index < 4) {
+                            ?>
+                                    <div class="funny__item">
+                                        <a class="link-image-to-detail" href="<?= get_the_permalink($item) ?>">
+                                            <img class="funny__img" src="<?= get_template_child_directory() . '/assets/images/image-recent-1.png' ?>" alt="" srcset="">
+                                        </a>
+                                        <div class="funny__content">
+                                            <?php if (wp_get_post_tags($item->ID)[0]->name) { ?>
+                                                <p class="tag fs-11 lh-15"><?= "#" . wp_get_post_tags($item->ID)[0]->name ?></p>
+                                            <?php } ?>
+                                            <a class="link-to-detail" href="<?= get_the_permalink($item) ?>">
+                                                <h4 class="title fs-13 lh-15 fw-700"><?= $item->post_title ?></h4>
+                                            </a>
+                                            <p class="description fs-11 lh-15">
+                                                <?= $item->post_excerpt ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                            <?php
+                                }
+                            } ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

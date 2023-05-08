@@ -409,7 +409,7 @@ footer.footer-page {
     padding: 0;
   }
   .site-content {
-    padding-top: 4.2rem;
+    padding-top: 8.1rem;
   }
   .fp-nav-bar {
     display: flex;
@@ -443,21 +443,59 @@ footer.footer-page {
   .contact-us__content {
     max-width: 61rem;
     margin: auto;
-    padding: 2rem 1.8rem 3.5rem 1.8rem;
+    padding: 1.5rem 1.8rem 2rem 1.8rem;
   }
   .header-page__box-search {
     width: 40rem;
+  }
+  .contact-us {
+    margin-top: 2rem;
+    padding: 2.5rem 0 2rem 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .site-content {
+    padding-top: 7.1rem;
+  }
+  .hp-nav-bar-mobile {
+    height: 6rem;
+  }
+  .hp-nav-bar-mobile .btn-search i,
+  .hp-nav-bar-mobile #btn-toggle-menu-mobile i {
+    font-size: 2.6rem;
+  }
+  .fp-nav-bar__item {
+    padding: 0.8rem 0.5rem;
+    line-height: 1.6rem;
+  }
+  .contact-us {
+    padding: 2rem 0 1.5rem 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .contact-us {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding: 2rem 0 1.5rem 0;
   }
   .side-bar {
     gap: 1.6rem;
   }
   .header-page__box-search {
     width: 30rem;
+  }
+  .fp-nav-bar__item {
+    padding: 0.5rem 0.5rem;
+    line-height: 1.6rem;
+    font-size: 1.5rem;
+  }
+  .contact-us__content {
+    max-width: 61rem;
+    margin: auto;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+  .entertainment-page .paginate {
+    padding-top: 0rem !important;
+    padding-bottom: 2rem !important;
   }
 }

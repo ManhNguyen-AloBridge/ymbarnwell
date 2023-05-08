@@ -74,19 +74,17 @@
     grid-template-columns: 1fr;
   }
   .entertainment-page .entertainment-content-item {
-    height: 41rem;
-    gap: 0.5rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80% auto;
+    height: auto;
+    gap: 1rem;
   }
   .entertainment-page .entertainment-content-item__description {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* number of lines to show */
-    line-height: 1.8rem; /* fallback */
-    max-height: 1.8rem * 2; /* fallback */
+    -webkit-line-clamp: 4;
+    line-height: 1.8rem;
+    max-height: 1.8rem * 4;
   }
   .entertainment-page .entertainment__content {
     order: 0;
@@ -102,10 +100,26 @@
   }
 }
 @media only screen and (max-width: 576px) {
+  .entertainment-page .entertainment-content-item {
+    height: 40rem;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% auto;
+  }
 }
 @media only screen and (max-width: 480px) {
   .entertainment-page .entertainment-content-item {
-    height: 32rem;
+    height: 34rem;
     grid-template-rows: 70% auto;
+  }
+
+  .entertainment-page .entertainment-content-item__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.8rem;
+    max-height: 1.8rem * 3;
   }
 }
