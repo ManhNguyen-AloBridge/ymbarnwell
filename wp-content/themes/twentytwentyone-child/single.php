@@ -19,7 +19,7 @@ set_query_var('social', true);
                 </div>
             </div>
             <div class="side-bar">
-                <?= get_template_part('components/sidebar') ?>
+                <?= get_template_part('components/common/sidebar') ?>
             </div>
 
         </div>

@@ -1,31 +1,31 @@
-.entertainment-page .entertainment__head {
+.page-list-template .page__head {
   text-align: center;
   padding-bottom: 4.2rem;
   width: 59%;
   margin: auto;
 }
 
-.entertainment-page .entertainment__main {
+.page-list-template .page__main {
   gap: 0.5rem;
   display: grid;
   grid-template-columns: 65% auto;
 }
-.entertainment-page .entertainment-content-item {
+.page-list-template .page-content-item {
   gap: 1.5rem;
   display: grid;
   height: 20rem;
   margin-bottom: 1rem;
   grid-template-columns: 30% auto;
 }
-.entertainment-page .entertainment-content-item:last-child {
+.page-list-template .page-content-item:last-child {
   margin-bottom: 0;
 }
-.entertainment-page .entertainment-content-item__image {
+.page-list-template .page-content-item__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.entertainment-page .entertainment-content-item__description {
+.page-list-template .page-content-item__description {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -36,48 +36,48 @@
 }
 
 @media only screen and (max-width: 1199px) {
-  .entertainment-page .entertainment-content-item {
+  .page-list-template .page-content-item {
     height: 16rem;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .entertainment__title {
+  .page__title {
     padding-top: 1.8rem;
   }
-  .entertainment-page .entertainment__head {
+  .page-list-template .page__head {
     width: 84%;
   }
-  .entertainment-page .entertainment__main {
+  .page-list-template .page__main {
     gap: 1rem;
   }
-  .entertainment-page .entertainment-content-item {
+  .page-list-template .page-content-item {
     height: 15rem;
     overflow: hidden;
     grid-template-columns: 40% auto;
   }
 }
 @media only screen and (max-width: 768px) {
-  .entertainment-page .entertainment__head {
+  .page-list-template .page__head {
     width: 100%;
     padding-bottom: 1.5rem;
   }
-  .entertainment-page .entertainment__description {
+  .page-list-template .page__description {
     display: none;
   }
-  .entertainment-page .entertainment__title {
+  .page-list-template .page__title {
     background-color: var(--bg-title);
     color: var(--white-color);
     padding: 1.2rem;
   }
-  .entertainment-page .entertainment__main {
+  .page-list-template .page__main {
     grid-template-columns: 1fr;
   }
-  .entertainment-page .entertainment-content-item {
+  .page-list-template .page-content-item {
     height: auto;
     gap: 1rem;
   }
-  .entertainment-page .entertainment-content-item__description {
+  .page-list-template .page-content-item__description {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -86,21 +86,21 @@
     line-height: 1.8rem;
     max-height: 1.8rem * 4;
   }
-  .entertainment-page .entertainment__content {
+  .page-list-template .page__content {
     order: 0;
   }
-  .entertainment-page .side-bar {
+  .page-list-template .side-bar {
     order: 2;
     margin-bottom: 0.8rem;
   }
-  .entertainment-page .paginate {
+  .page-list-template .paginate {
     order: 1;
     padding-top: 2rem;
     padding-bottom: 3rem;
   }
 }
 @media only screen and (max-width: 576px) {
-  .entertainment-page .entertainment-content-item {
+  .page-list-template .page-content-item {
     height: 40rem;
     overflow: hidden;
     grid-template-columns: 1fr;
@@ -108,18 +108,18 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  .entertainment-page .entertainment-content-item {
+  .page-list-template .page-content-item {
     height: 34rem;
     grid-template-rows: 70% auto;
   }
 
-  .entertainment-page .entertainment-content-item__description {
+  .page-list-template .page-content-item__description {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     line-height: 1.8rem;
-    max-height: 1.8rem * 3;
+    max-height: 1.8rem * 2;
   }
 }
