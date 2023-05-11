@@ -3,18 +3,20 @@ $argsRecent = array('category' => get_option('data_config')['ANIMAL_CATEGORY_ID'
 $recentPosts = get_posts($argsRecent);
 $social = get_query_var('social');
 ?>
-<?php if ($social != '') { ?>
-    <div class="share box-shadow-nor">
-        <h3 class="share__title fw-700">Share</h3>
-        <div class="share__social">
-            <a class="social-link" href="#"><span class="facebook"><img class="social__image" src="<?= get_template_child_directory() . '/assets/images/facebook-color.png' ?>" alt=""></span></a>
-            <a class="social-link" href="#"><span class="twitter"><img class="social__image" src="<?= get_template_child_directory() . '/assets/images/twitter-color.png' ?>" alt=""></span></a>
-            <a class="social-link" href="#"><span class="youtube"><img class="social__image" src="<?= get_template_child_directory() . '/assets/images/p-color.png' ?>" alt=""></span></a>
-        </div>
-    </div>
-<?php } ?>
+
+<?php if ($social != '' && is_active_sidebar('my-sidebar')) {
+    dynamic_sidebar('my-sidebar');
+} ?>
+
 <div class="recent">
     <h3 class="recent-title fs-16 fw-700 lh-22">RECENT POST</h3>
+    <?php
+    if (count($recentPosts) == 0) {
+    ?>
+        <p class="text-dark">Sorry, but nothing post of this category!</p>
+    <?php
+    }
+    ?>
     <?php foreach ($recentPosts as $item) { ?>
         <div class="recent-item">
             <div class="recent-item__content">

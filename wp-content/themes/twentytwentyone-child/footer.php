@@ -19,26 +19,13 @@
 
 <?php
 // get_template_part('template-parts/footer/footer-widgets');
+if (is_active_sidebar('sidebar-1')) : ?>
+
+	<?php dynamic_sidebar('sidebar-1'); ?>
+
+<?php
+endif;
 ?>
-
-<div class="contact-us">
-	<h3 class="contact-us__title fw-700">YMBARNWELL</h3>
-	<p class="contact-us__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mattis nunc. Nullam ullamcorper dui arcu, quis fringilla lacus varius non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet mattis nunc. Nullam ullamcorper dui arcu, quis fringilla lacus varius non.</p>
-	<p class="contact-us__us fw-700">Contact us: admin@gmail.com</p>
-</div>
-<footer class="footer-page">
-	<div class="footer-page__bar container-lg">
-		<ui class="fp-nav-bar">
-			<li class="fp-nav-bar__item"><a href="#">About US</a></li>
-			<li class="fp-nav-bar__item"><a href="#">Contact US</a></li>
-			<li class="fp-nav-bar__item"><a href="#">Cookie Policy</a></li>
-			<li class="fp-nav-bar__item"><a href="#">DMCA</a></li>
-			<li class="fp-nav-bar__item"><a href="#">Terms of Service</a></li>
-		</ui>
-	</div>
-
-	<!-- <p class="global-footer__copy-right text-center">Copyright 2022 Entrepreneurs’Organization Hokkaido All rights Reserved.</p> -->
-</footer>
 
 </div><!-- #page -->
 

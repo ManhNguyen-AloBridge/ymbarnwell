@@ -40,23 +40,43 @@ $pageData = get_page($pageId);
                 <?php
                     endwhile;
                 } ?>
+
+                <?php
+                if (!$query->have_posts()) {
+                ?>
+                    <p class="text-dark">Sorry, but nothing post of this category!</p>
+                <?php
+                }
+                ?>
             </div>
             <div class="side-bar">
                 <?= get_template_part('components/common/sidebar') ?>
             </div>
 
-            <div class="paginate d-flex d-md-none">
+            <?php
+            if ($query->have_posts()) {
+            ?>
+                <div class="paginate d-flex d-md-none">
+                    <button class="paginate__btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="paginate__info fs-18 fw-700 lh-24"><?= "Page $current_page of $total_pages" ?></div>
+                    <button class="paginate__btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+
+        <?php
+        if ($query->have_posts()) {
+        ?>
+            <div class="paginate d-none d-md-flex">
                 <button class="paginate__btn prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="paginate__info fs-18 fw-700 lh-24"><?= "Page $current_page of $total_pages" ?></div>
                 <button class="paginate__btn next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-        </div>
-
-        <div class="paginate d-none d-md-flex">
-            <button class="paginate__btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="paginate__info fs-18 fw-700 lh-24"><?= "Page $current_page of $total_pages" ?></div>
-            <button class="paginate__btn next"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+        <?php
+        }
+        ?>
 
         <?php
         if ($total_pages > 1) {

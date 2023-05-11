@@ -8,8 +8,6 @@ $(document).ready(function () {
 
   handlePaginate();
 
-  checkActiveMenu();
-
   $(document).ready(function () {
     $(".slideshow").slick({
       autoplay: true,
@@ -20,33 +18,6 @@ $(document).ready(function () {
     });
   });
 });
-
-function checkActiveMenu() {
-  let currentUrl = window.location.href;
-  if (window.location.search == "") {
-    currentUrl = currentUrl.slice(0, -1);
-  }
-  $(".menu__content .menu__item a").each((index, item) => {
-    handleAddClassActiveForMenu(".menu__item", item, currentUrl);
-  });
-  $(".hp-nav-bar .hp-nav-bar__item a").each((index, item) => {
-    handleAddClassActiveForMenu(".hp-nav-bar__item", item, currentUrl);
-  });
-}
-
-function handleAddClassActiveForMenu(parentsClass, item, currentUrl) {
-  if ($(item).attr("href") == currentUrl) {
-    $(item).closest(parentsClass).addClass("active");
-  }
-
-  if (
-    window.location.search.includes("page_id") &&
-    $(item).attr("href").includes("page_id") &&
-    window.location.href.includes($(item).attr("href"))
-  ) {
-    $(item).closest(parentsClass).addClass("active");
-  }
-}
 
 function handlePaginate() {
   if ($("#paginate-prev").length == 0) {

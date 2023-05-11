@@ -57,6 +57,13 @@ $funnyPosts = get_posts($argsFunny);
                     <?php
                         }
                     } ?>
+                    <?php
+                    if (count($recentPosts) == 0) {
+                    ?>
+                        <p class="text-dark">Sorry, but nothing post of this category!</p>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="right-content">
                     <?php foreach ($recentPosts as $index => $item) {
@@ -95,6 +102,14 @@ $funnyPosts = get_posts($argsFunny);
                 <?php
                     }
                 } ?>
+
+                <?php
+                if (count($animalPosts) == 0) {
+                ?>
+                    <p class="text-dark">Sorry, but nothing post of this category!</p>
+                <?php
+                }
+                ?>
             </div>
             <div class="right-content">
                 <?php foreach ($animalPosts as $index => $item) {
@@ -117,6 +132,14 @@ $funnyPosts = get_posts($argsFunny);
         <div class="entertainment-funny">
             <div class="entertainment">
                 <h3 class="entertainment__title fw-700 fs-16 lh-22 title">ENTERTAINMENT</h3>
+                <?php
+                if (count($entertainmentPosts) == 0) {
+                ?>
+                    <p class="text-dark">Sorry, but nothing post of this category!</p>
+                <?php
+                }
+                ?>
+
                 <?php foreach ($entertainmentPosts as $index => $item) {
                     if ($index < 4) {
                 ?>
@@ -143,6 +166,14 @@ $funnyPosts = get_posts($argsFunny);
             <div class="funny">
                 <h3 class="funny__title fw-700 fs-16 lh-22 title">FUNNY</h3>
                 <div class="funny__scroll d-none d-sm-block">
+                    <?php
+                    if (count($funnyPosts) == 0) {
+                    ?>
+                        <p class="text-dark">Sorry, but nothing post of this category!</p>
+                    <?php
+                    }
+                    ?>
+
                     <?php foreach ($funnyPosts as $index => $item) {
                         if ($index < 4) {
                     ?>
@@ -169,6 +200,13 @@ $funnyPosts = get_posts($argsFunny);
                 <div class="slider d-block d-sm-none">
                     <div class="slideshow">
                         <div class="slideshow">
+                            <?php
+                            if (count($funnyPosts) == 0) {
+                            ?>
+                                <p class="text-dark">Sorry, but nothing post of this category!</p>
+                            <?php
+                            }
+                            ?>
                             <?php foreach ($funnyPosts as $index => $item) {
                                 if ($index < 4) {
                             ?>

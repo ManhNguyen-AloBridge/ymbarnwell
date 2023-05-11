@@ -56,3 +56,43 @@ function add_pages_style()
     // wp_enqueue_style('about-page', WP_SITEURL . '/wp-content/themes/twentytwentyone-child/assets/css/pages/about/index.css');
     // wp_enqueue_style('search-page', WP_SITEURL . '/wp-content/themes/twentytwentyone-child/assets/css/pages/search/index.css');
 }
+
+function mytheme_register_sidebar()
+{
+    register_sidebar(array(
+        'name'          => __('My Sidebar', 'mytheme'),
+        'id'            => 'my-sidebar',
+        'description'   => __('This is my custom sidebar.', 'mytheme'),
+        'before_widget' => '<div class="widget1">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action('widgets_init', 'mytheme_register_sidebar');
+
+function myshortcode($atts)
+{
+    // $argsRecent = array('category' => get_option('data_config')['ANIMAL_CATEGORY_ID'], 'post_type' =>  'post', 'numberposts' => get_option('data_config')['RECENT_POST_NUMBER']);
+    // $recentPosts = get_posts($argsRecent);
+    // $content = '';
+    // $content += "<div class='recent'>
+    //     <h3 class='recent-title fs-16 fw-700 lh-22'>RECENT POST</h3>";
+    // foreach ($recentPosts as $item) {
+    //     $content += "<div class='recent-item'>
+    //                     <div class='recent-item__content'>
+    //                         <a class='link-image-to-detail' href='" + get_the_permalink($item) + "'>
+    //                             <img class='recent-item__image' src='" + get_image_thumbnail_post($item) + "' alt=''>
+    //                         </a>
+    //                         <a class='link-to-detail' href='" + get_the_permalink($item) + "'>
+    //                             <h4 class='recent-item__title fs-12 fw-700 lh-18'>" + $item->post_title + "</h4>
+    //                         </a>
+    //                     </div>
+    //                 </div>";
+    // }
+    // $content += "</div>";
+
+    // var_dump($content);
+    return "aloha";
+}
+add_shortcode('recent_shortcode', 'myshortcode');
